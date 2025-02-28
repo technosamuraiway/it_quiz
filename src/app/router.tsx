@@ -5,7 +5,7 @@ export const router = createBrowserRouter([
     path: '/',
     element: (
       <>
-        <header>APP</header>
+        <header>APP_APP</header>
         <Outlet />
       </>
     ),
