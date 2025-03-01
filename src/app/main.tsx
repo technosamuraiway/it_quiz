@@ -7,9 +7,7 @@ import { RouterProvider } from 'react-router-dom'
 window.addEventListener('load', async () => {
   if ('serviceWorker' in navigator) {
     try {
-      const register = await navigator.serviceWorker.register('/sw.js')
-      console.log(register)
-      console.log('SW register success')
+      await navigator.serviceWorker.register('/sw.js')
     } catch (error) {
       console.log('SW register failed')
     }
