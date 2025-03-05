@@ -1,13 +1,19 @@
+@import '../../../app/styles/mixins';
+
 .root {
+  @include container;
+
+  width: var(--mobile);
   margin-top: 100px;
-  padding: 20px 0;
-  background-color: orange;
+  padding-top: 20px;
 }
 
 .list {
   display: flex;
   flex-flow: column nowrap;
   row-gap: 10px;
+
+  font-size: var(--font-size-m);
   color: #070ab9;
 }
 
