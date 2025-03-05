@@ -1,0 +1,30 @@
+// CSS-переменные (var(--desktop)) не могут быть использованы напрямую в медиа-запросах.
+// Это ограничение CSS, а не Sass. Медиа-запросы вычисляются на этапе компиляции,
+// а CSS-переменные - во время выполнения в браузере.
+// поэтому используем SCSS переменные
+
+$desktop: 64rem;
+$mobile: 48rem;
+
+@mixin container {
+  width: 100%;
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+
+  background-color: orange;
+
+  @media (width <= $desktop) {
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    background-color: greenyellow;
+  }
+
+  @media (width <= $mobile) {
+    max-width: $mobile;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background-color: #3a77bf;
+  }
+}
