@@ -1,0 +1,16 @@
+.root {
+  margin-top: 100px;
+  padding: 20px 0;
+  background-color: orange;
+}
+
+.list {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
+  color: #070ab9;
+}
+
+.item {
+  text-align: center;
+}
