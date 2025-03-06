@@ -23,13 +23,13 @@ const manifest: Partial<ManifestOptions> = {
   ],
   screenshots: [
     {
-      src: '/pwa/screenshots/desktop.png',
+      src: '/pwa/installation-screenshots/desktop.png',
       type: 'image/png',
       sizes: '862x485',
       form_factor: 'wide',
     },
     {
-      src: '/pwa/screenshots/mobile.png',
+      src: '/pwa/installation-screenshots/mobile.png',
       type: 'image/png',
       sizes: '696x383',
       form_factor: 'narrow',
