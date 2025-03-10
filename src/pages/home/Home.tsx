@@ -48,6 +48,8 @@ function Home() {
                     </div>))}
 
                 </div>
+                <img className={s.image} src="/keyboard.svg" alt="keyboard"/>
+
             </div>
         </div>
     )
