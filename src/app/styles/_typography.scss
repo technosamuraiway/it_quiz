@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+  src: url('fonts/inter/Inter-Medium.woff2'), url('fonts/inter/Inter-Medium.woff');
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url('fonts/inter/Inter-Regular.woff2'), url('fonts/inter/Inter-Regular.woff');
+}
+
+:root {
+  --font-family: inter;
+  --font-weight-Regular: 400;
+  --font-weight-Medium: 500;
+
+  // font-size - boilerplate - html - 16px = 1rem
+  --font-size-xs: 0.75rem; // 12px
+  --font-size-s: 0.875rem; // 14px
+  --font-size-m: 1rem; // 16px
+  --font-size-l: 1.125rem; // 18px
+  --font-size-xl: 1.25rem; // 20px
+  --font-size-xxl: 1.5rem; // 24px
+  --font-size-xxxl: 2.25rem; // 36px
+  --font-size-xxxxl: 3rem; // 48px
+
+  // line-height
+  --line-height-s: 1rem; // 16px
+  --line-height-m: 1.5rem; // 24px
+  --line-height-l: 2.25rem; // 36px
+  --line-height-xl: 3rem; // 48px
+  --line-height-xxl: 3.75rem; // 60px
+}
+
+body {
+  font-family: var(--font-family), sans-serif;
+}
