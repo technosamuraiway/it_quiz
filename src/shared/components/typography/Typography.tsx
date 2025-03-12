@@ -1,4 +1,4 @@
-import {FC, JSX, ReactNode} from 'react'
+import { FC, JSX, ReactNode } from 'react'
 import cx from 'classnames'
 import classes from './Typography.module.sass'
 
@@ -10,17 +10,10 @@ const variantsMapping = {
   bodyXL: 'p',
   bodyL: 'p',
   bodyM: 'p',
-  bodyS: 'p'
+  bodyS: 'p',
 } as { [key: string]: string }
 
-export type VariantsType =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'bodyXL'
-  | 'bodyL'
-  | 'bodyM'
-  | 'bodyS'
+export type VariantsType = 'h1' | 'h2' | 'h3' | 'bodyXL' | 'bodyL' | 'bodyM' | 'bodyS'
 
 export type WeightType = 'bold' | 'medium' | 'light' | 'semibold' | 'normal'
 export type ColorType =
@@ -84,9 +77,7 @@ const Typography: FC<TypographyProps> = ({
   style: STYLE,
   ...rest
 }) => {
-  const Component = (
-    variant ? variantsMapping[variant] : 'span'
-  ) as keyof JSX.IntrinsicElements
+  const Component = (variant ? variantsMapping[variant] : 'span') as keyof JSX.IntrinsicElements
   const style = classes[`typography--variant-${variant}`]
   const alignStyle = align ? classes[`typography--align-${align}`] : ''
   const weightStyle = classes[`typography--weight-${weight}`]
@@ -104,7 +95,7 @@ const Typography: FC<TypographyProps> = ({
         error ? classes['typography-error'] : classes.typography,
         {
           [classes.inherited]: inherited,
-          [alignStyle]: !!align
+          [alignStyle]: !!align,
         },
         { [classes.pointer]: !!pointer },
         { [classes.underline]: !!underline }
