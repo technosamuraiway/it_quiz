@@ -1,10 +1,23 @@
+@font-face {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+  src: url('fonts/inter/Inter-Medium.woff2'), url('fonts/inter/Inter-Medium.woff');
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url('fonts/inter/Inter-Regular.woff2'), url('fonts/inter/Inter-Regular.woff');
+}
+
 :root {
-  --font-family-primary: 'Inter', sans-serif;
-  --font-weight-small: 300;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semi-bold: 600;
-  --font-weight-bold: 700;
+  --font-family: inter;
+  --font-weight-Regular: 400;
+  --font-weight-Medium: 500;
 
   // font-size - boilerplate - html - 16px = 1rem
   --font-size-xs: 0.75rem; // 12px
@@ -22,4 +35,8 @@
   --line-height-l: 2.25rem; // 36px
   --line-height-xl: 3rem; // 48px
   --line-height-xxl: 3.75rem; // 60px
+}
+
+body {
+  font-family: var(--font-family), sans-serif;
 }
