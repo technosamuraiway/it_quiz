@@ -1,0 +1,9 @@
+.container {
+  height: 100%;
+  padding: 1.5rem 12.5rem;
+  background-color: var(--color-info-50);
+
+  @media (width <= 860px) {
+    padding: 1rem 1.375rem;
+  }
+}
