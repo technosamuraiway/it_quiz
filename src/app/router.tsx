@@ -1,21 +1,24 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, Outlet } from 'react-router-dom'
+import Header from '@/widgets/header'
+import Footer from '@/widgets/footer'
 import Home from '@/pages/home'
+import s from './Router.module.scss'
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: (
-      <Home />
-      // <div style={{ backgroundColor: '#474d47', height: '100vh' }}>
-      //   <header style={{ textAlign: 'center' }}>header</header>
-      //   <Outlet />
-      // </div>
+      <div className={s.container}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
     ),
-    // children: [
-    //   {
-    //     path: '/',
-    //     element: <MockPage />,
-    //   },
-    // ],
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+    ],
   },
 ])
