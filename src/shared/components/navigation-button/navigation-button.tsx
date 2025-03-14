@@ -7,7 +7,7 @@ type Props = {
 
 export const NavigationButton = ({ direction }: Props) => {
   return (
-    <Button variant={'variant-navigation'} type={'button'} disabled>
+    <Button variant={'variant-navigation'} type={'button'}>
       <span className={s.arrow}>{direction === 'left' ? '◀' : '▶'}</span>
     </Button>
   )

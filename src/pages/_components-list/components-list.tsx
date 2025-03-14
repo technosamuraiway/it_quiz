@@ -1,8 +1,9 @@
 import s from './components-list.module.scss'
-import Typography from '@/shared/components/typography'
 import { ReactNode } from 'react'
 import { Button, NavigationButton } from '@/shared'
 import { Link } from 'react-router-dom'
+import Typography from '@/shared/ui/typography'
+import { Card } from '@/shared/ui/card'
 
 type List = {
   name: string
@@ -37,6 +38,14 @@ const list: List[] = [
   {
     name: 'Кнопка-навигация по вопросам',
     component: <NavigationButton direction={'right'} />,
+  },
+  {
+    name: 'Card',
+    component: (
+      <Card>
+        <div>Content</div>
+      </Card>
+    ),
   },
 ]
 
