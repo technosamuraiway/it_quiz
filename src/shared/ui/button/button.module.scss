@@ -1,0 +1,35 @@
+.isDisabled {
+  opacity: 0.4;
+}
+
+.variant-quiz-card {
+  display: inline-block;
+
+  padding: 1.625rem 0.5rem;
+  border: solid 0.125rem var(--color-accent-main);
+  border-radius: 0.6rem;
+
+  background-color: var(--color-light-main);
+}
+
+.variant-default {
+  padding: 0.5rem;
+  border: solid 0.125rem var(--color-accent-main);
+  border-radius: 0.6rem;
+  background-color: var(--color-light-main);
+}
+
+.variant-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3.125rem;
+  height: 3.125rem;
+  border: solid 0.125rem var(--color-accent-main);
+  border-radius: 3.125rem;
+
+  color: var(--color-accent-main);
+
+  background-color: var(--color-light-main);
+}
