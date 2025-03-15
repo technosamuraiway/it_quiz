@@ -1,16 +1,26 @@
 import s from './components-list.module.scss'
-import { ReactNode } from 'react'
-import { Button, NavigationButton } from '@/shared'
+import { ReactNode, useState } from 'react'
+import { Button, NavigationButton, Select, Card } from '@/shared'
 import { Link } from 'react-router-dom'
 import Typography from '@/shared/ui/typography'
-import { Card } from '@/shared/ui/card'
+import { selectData } from './mock-data'
 
 type List = {
   name: string
   component: ReactNode
 }
 
+const SelectComponent = () => {
+  const [value, setValue] = useState(selectData[0].value)
+
+  return <Select options={selectData} onValueChange={setValue} currentValue={value} />
+}
+
 const list: List[] = [
+  {
+    name: 'Select',
+    component: <SelectComponent />,
+  },
   {
     name: 'Кнопка-карточка для квиза',
     component: (

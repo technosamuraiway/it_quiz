@@ -21,7 +21,11 @@ export const Button = <T extends ElementType = 'button'>({
 }: Props<T>) => {
   const Component = as || 'button'
   return (
-    <Component className={clsx(className, s[variant], disabled && s.isDisabled)} {...rest}>
+    <Component
+      className={clsx(className, s[variant], disabled && s.isDisabled)}
+      tabIndex={disabled ? -1 : 0}
+      {...rest}
+    >
       {children}
     </Component>
   )

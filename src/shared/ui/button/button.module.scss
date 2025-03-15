@@ -1,5 +1,15 @@
+@use '../../../app/styles/mixins' as mixins;
+
+* {
+  @include mixins.tab-navigation;
+}
+
 .isDisabled {
   opacity: 0.4;
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .variant-quiz-card {

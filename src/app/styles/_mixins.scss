@@ -28,3 +28,9 @@ $mobile: 48rem;
     background-color: #3a77bf;
   }
 }
+
+@mixin tab-navigation {
+  &:focus-visible {
+    outline: 0.125rem solid black;
+  }
+}

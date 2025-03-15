@@ -1,2 +1,99 @@
-.root {
+@use '../../../app/styles/mixins' as mixins;
+
+$border-radius: 0.0625rem;
+
+* {
+  user-select: none; /* Для современных браузеров */
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+}
+
+.option {
+  flex-grow: 1;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-m);
+  color: var(--color-font-main);
+}
+
+.arrow {
+  transform: rotate(180deg) translateY(-0.15rem);
+
+  display: flex;
+  align-items: center;
+
+  color: var(--color-accent-main);
+
+  transition: transform 0.3s ease;
+
+  &Up {
+    transform: rotate(0deg);
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.trigger,
+.item {
+  cursor: pointer;
+  padding: 0.3125rem 0.75rem;
+}
+
+.trigger,
+.content {
+  border: $border-radius solid var(--color-accent-main);
+  border-radius: 0.6rem;
+
+  &[data-state='open'] {
+    background-color: var(--color-light-main);
+  }
+}
+
+.trigger {
+  @include mixins.tab-navigation;
+
+  display: flex;
+  width: 14rem;
+  background-color: var(--color-light-main);
+
+  &:hover > span:first-child {
+    color: var(--color-accent-main);
+  }
+
+  &[data-state='open'] {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.item {
+  border: none;
+  outline: none;
+
+  &[data-state='checked'] {
+    background-color: var(--color-accent-main-rgb);
+  }
+
+  &:not([data-disabled]):hover,
+  &:not([data-disabled]):focus,
+  &:not([data-disabled]):focus-within {
+    background-color: var(--color-accent-main-rgb);
+    outline: none;
+  }
+}
+
+.content {
+  width: var(--radix-select-trigger-width);
+  max-height: var(--radix-select-content-available-height);
+
+  &[data-state='open'] {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
