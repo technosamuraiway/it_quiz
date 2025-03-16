@@ -51,7 +51,7 @@ function Home() {
           </div>
         ))}
       </div>
-      <img width={401} height={372} src="/keyboard.svg" alt="keyboard" />
+      <img className = {s.keyboard} src="/keyboard.svg" alt="keyboard" />
     </div>
   )
 }

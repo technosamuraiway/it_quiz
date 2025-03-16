@@ -3,6 +3,7 @@ import Header from '@/widgets/header'
 import Footer from '@/widgets/footer'
 import Home from '@/pages/home'
 import s from './Router.module.scss'
+import { ComponentsList } from '@/pages'
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/components',
+        element: <ComponentsList />,
       },
     ],
   },

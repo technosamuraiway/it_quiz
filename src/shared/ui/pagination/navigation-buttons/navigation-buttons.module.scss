@@ -1,0 +1,18 @@
+@use '../../../../app/styles/mixins' as mixins;
+
+.navigationButton {
+  @include mixins.pagination-button;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  &Left span {
+    transform: rotate(-90deg);
+  }
+
+  &Right span {
+    transform: rotate(90deg);
+  }
+}

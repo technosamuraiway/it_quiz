@@ -1,0 +1,13 @@
+@use '../../../../../app/styles/mixins' as mixins;
+
+.pageButton {
+  @include mixins.pagination-button;
+
+  &.disabled {
+    pointer-events: none;
+  }
+}
+
+.selected {
+  background-color: var(--color-accent-main);
+}
