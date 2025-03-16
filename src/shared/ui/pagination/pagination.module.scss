@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  gap: 1.5625rem;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    list-style-type: none;
+  }
+}

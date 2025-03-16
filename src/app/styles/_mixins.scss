@@ -12,25 +12,48 @@ $mobile: 48rem;
   margin: 0 auto;
   padding: 0 2.5rem;
 
-  background-color: orange;
-
   @media (width <= $desktop) {
     max-width: $desktop;
     margin: 0 auto;
     padding: 0 1.5rem;
-    background-color: greenyellow;
   }
 
   @media (width <= $mobile) {
     max-width: $mobile;
     margin: 0 auto;
     padding: 0 1rem;
-    background-color: #3a77bf;
   }
 }
 
 @mixin tab-navigation {
   &:focus-visible {
-    outline: 0.125rem solid black;
+    outline: revert;
+  }
+}
+
+@mixin pagination-button {
+  all: unset;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.8rem;
+  height: 1.8rem;
+  padding-top: 0.1rem;
+  border: 0.05rem solid rgb(var(--color-font-main-rgb));
+  border-radius: 0.4rem;
+
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
+
+  &:focus-visible {
+    outline: revert;
+  }
+
+  &:hover {
+    background-color: var(--color-accent-main-rgb);
   }
 }

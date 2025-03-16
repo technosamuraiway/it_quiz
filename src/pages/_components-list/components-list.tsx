@@ -18,25 +18,19 @@ const SelectComponent = () => {
 
 const PaginationComponent = () => {
   const [page, setPage] = useState(1)
-  const TOTALNUMBER_OF_PAGES = 10
-  const NUMBER_PER_PAGE = 5
+  const totalCount = 10
 
-  return (
-    <Pagination
-      onChange={setPage}
-      page={page}
-      perPage={NUMBER_PER_PAGE}
-      count={TOTALNUMBER_OF_PAGES}
-      onPageTitle={'onPageTitle'}
-      showTitle={'showTitle'}
-    />
-  )
+  return <Pagination onChange={setPage} page={page} totalCount={totalCount} />
 }
 
 const list: List[] = [
   {
     name: 'Select',
     component: <SelectComponent />,
+  },
+  {
+    name: 'Pagination',
+    component: <PaginationComponent />,
   },
   {
     name: 'Кнопка-карточка для квиза',
