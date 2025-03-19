@@ -1,8 +1,8 @@
-import { Outlet } from "react-router-dom";
-import Header from "@/widgets/header";
-import Footer from "@/widgets/footer";
+import { Outlet } from 'react-router-dom'
+import Header from '@/widgets/header'
+import Footer from '@/widgets/footer'
 
-import s from "./Layout.module.scss";
+import s from './Layout.module.scss'
 
 function Layout() {
   return (
@@ -11,7 +11,7 @@ function Layout() {
       <Outlet />
       <Footer />
     </div>
-  );
+  )
 }
 
-export default Layout;
+export default Layout

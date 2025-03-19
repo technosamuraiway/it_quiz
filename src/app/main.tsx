@@ -9,7 +9,7 @@ window.addEventListener('load', async () => {
     try {
       await navigator.serviceWorker.register('/sw.js')
     } catch (error) {
-      console.log('SW register failed')
+      console.log(error, 'SW register failed')
     }
   }
 })
