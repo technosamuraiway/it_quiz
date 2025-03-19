@@ -11,13 +11,14 @@
     "lint": "eslint src --no-error-on-unmatched-pattern --fix && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input"
   },
   "dependencies": {
+    "@radix-ui/react-scroll-area": "^1.2.3",
+    "@radix-ui/react-select": "^2.1.6",
+    "classnames": "^2.5.1",
+    "clsx": "2.1.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-router-dom": "7.2.0",
     "vite-plugin-pwa": "0.21.1",
-    "classnames": "^2.5.1",
-    "clsx": "2.1.1",
-
     "workbox-window": "7.3.0"
   },
   "devDependencies": {
