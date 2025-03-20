@@ -43,7 +43,7 @@ function Home() {
         <div></div>
       </div>
       <div className={s.categories}>
-        {mockCategories.map((category: any) => (
+        {mockCategories.map((category: { id: number; title: string }) => (
           <div key={category.id} className={s.category}>
             <Typography weight={'normal'} variant={'h2'}>
               {category.title}
