@@ -1,4 +1,4 @@
-import { FC, JSX, ReactNode } from 'react'
+import { CSSProperties, FC, JSX, ReactNode } from 'react'
 import cx from 'classnames'
 import classes from './Typography.module.sass'
 
@@ -38,7 +38,7 @@ export type TypographyProps = {
   error?: boolean
   color?: ColorType
   weight?: WeightType
-  style?: any
+  style?: CSSProperties
   pointer?: boolean
   underline?: boolean
 }
