@@ -1,14 +1,7 @@
 // server/models/userModel.ts
-import { Pool, QueryResult as PGQueryResult, QueryResultRow } from 'pg';
+import { QueryResult as PGQueryResult, QueryResultRow } from 'pg';
 import pool from '../config/db';
 import { User } from '../custom';
-
-// Define types for user data
-// export interface User {
-//   id: number;
-//   username: string;
-//   password: string;
-// }
 
 // Use the pg `QueryResult` type directly and constrain T to QueryResultRow
 type QueryResult<T extends QueryResultRow> = PGQueryResult<T>;

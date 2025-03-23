@@ -2,7 +2,6 @@ require('dotenv').config()
 import express from 'express'
 import cors from 'cors'
 import authRoutes from './routes/authRoutes'
-import { authenticateToken } from './middleware/authMiddleware'
 import pool from './config/db' // Import the database pool
 
 const app = express()

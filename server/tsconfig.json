@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "esModuleInterop": true, // Enable esModuleInterop
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "strict": true, // Enable strict type-checking options
+    "outDir": "./dist", // Output directory for compiled files
+    "rootDir": "./server", // Root directory for your source files
+    "resolveJsonModule": true // Allows importing .json files
+  },
+  "include": [
+    "server/**/*.ts" // Include all TypeScript files in the server folder
+  ],
+  "exclude": [
+    "node_modules" // Exclude node_modules folder from compilation
+  ]
+}

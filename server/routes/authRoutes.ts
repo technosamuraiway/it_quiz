@@ -1,11 +1,16 @@
 // server/routes/authRoutes.ts
-import express from 'express';
-import { register, login } from '../controllers/authController';
+import express, { Request, Response } from 'express'; // Importing express along with types
+import { login } from '../controllers/authController';
 
 const router = express.Router();
 
-router.post('/register', register);
-router.post('/login', login);
+// Define the POST route for login, properly typing `req` and `res`
+router.post('/login', async (req: Request, res: Response) => {
+  try {
+    await login(req, res); // Call the `login` function from the controller
+  } catch (err) {
+    res.status(500).json({ error: 'Server error' }); // Handle any errors properly
+  }
+});
 
-
-export default router; 
+export default router;
