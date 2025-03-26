@@ -1,26 +1,30 @@
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
-import { getUserByUsername } from '../models/userModel'
 import { Request, Response } from 'express'
 import { User } from '../custom'
+import { getUserByUsername } from '../models/userModel'
 
 export const login = async (req: Request, res: Response): Promise<Response> => {
   const { username, password } = req.body
-  const { rows } = await getUserByUsername(username)
 
-  if (rows.length === 0) return res.status(400).json({ error: 'Invalid credentials' })
+  try {
+    const user: User | null = await getUserByUsername(username)
 
-  const user: User = rows[0] // Cast rows[0] as User
+    if (!user) return res.status(400).json({ error: 'Invalid credentials' })
+    if (!user.password) return res.status(400).json({ error: 'Password is missing' })
+    if (!user.is_admin) return res.status(403).json({ error: 'Access denied' }) // Only allow admin login
 
-  if (!user.password) return res.status(400).json({ error: 'Password is missing' }) // Check if password exists
+    const validPassword = await bcrypt.compare(password, user.password)
+    if (!validPassword) return res.status(400).json({ error: 'Invalid credentials' })
 
-  const validPassword = await bcrypt.compare(password, user.password)
-  if (!validPassword) return res.status(400).json({ error: 'Invalid credentials' })
+    const token = jwt.sign(
+      { id: user.id, username: user.username, is_admin: user.is_admin },
+      process.env.JWT_SECRET as string,
+      { expiresIn: '1h' }
+    )
 
-  const token = jwt.sign(
-    { id: user.id, username: user.username },
-    process.env.JWT_SECRET as string,
-    { expiresIn: '1h' }
-  )
-  return res.json({ token })
+    return res.json({ token })
+  } catch (error) {
+    return res.status(500).json({ error: 'Internal server error' })
+  }
 }

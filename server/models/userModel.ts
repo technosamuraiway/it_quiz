@@ -1,20 +1,15 @@
-// server/models/userModel.ts
-import { QueryResult as PGQueryResult, QueryResultRow } from 'pg';
-import pool from '../config/db';
-import { User } from '../custom';
 
-// Use the pg `QueryResult` type directly and constrain T to QueryResultRow
-type QueryResult<T extends QueryResultRow> = PGQueryResult<T>;
+import supabase from '../config/db'
+import { User } from '../custom'
 
-// Create user function
-export const createUser = async (username: string, hashedPassword: string): Promise<QueryResult<User>> => {
-  return pool.query(
-    'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id, username',
-    [username, hashedPassword]
-  );
-};
+// Get user by username function (including is_admin field)
+export const getUserByUsername = async (username: string): Promise<User | null> => {
+  const { data, error } = await supabase
+    .from('users')
+    .select('id, username, password, is_admin')
+    .eq('username', username)
+    .single()
 
-// Get user by username function
-export const getUserByUsername = async (username: string): Promise<QueryResult<User>> => {
-  return pool.query('SELECT * FROM users WHERE username = $1', [username]);
-};
+  if (error) return null // Return null instead of throwing an error for better handling in authController
+  return data as User
+}

@@ -1,9 +1,21 @@
-// server/config/db.js
-require('dotenv').config()
-import { Pool } from 'pg'
+//db.ts
+import { createClient } from '@supabase/supabase-js'
+import dotenv from 'dotenv';
+dotenv.config();
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-})
+if (!process.env.SUPABASE_URL || !process.env.SUPABASE_KEY) {
+  throw new Error('Missing Supabase environment variables')
+}
 
-export default pool
+const supabase = createClient(
+  process.env.SUPABASE_URL!, // Supabase URL from your project settings
+  process.env.SUPABASE_KEY!, {
+    global:{
+      headers: {
+        Authorization: `Bearer ${process.env.SUPABASE_KEY}`
+      }
+    }
+  }
+)
+
+export default supabase

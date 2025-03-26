@@ -4,8 +4,10 @@ import { Request } from 'express';
 // Define the User interface based on your app's needs
 interface User {
   id: number;
-  username: string;
-  password?: string;  // Optional password, only if needed
+  username?: string;
+  password?: string;
+  is_admin?: boolean;
+  role: 'admin' | 'user';
 }
 
 // Extend the Express namespace to add the `user` property to the Request interface
