@@ -15,12 +15,12 @@ app.use(cors())
 app.use('/auth', authRoutes)
 
 // Default route
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.send('Welcome to the IT Quiz API')
 })
 
 // Get all categories
-app.get('/categories', async (req: Request, res: Response) => {
+app.get('/categories', async (_req: Request, res: Response) => {
   try {
     const { data, error } = await supabase.from('categories').select('*')
     if (error) throw error
@@ -31,7 +31,7 @@ app.get('/categories', async (req: Request, res: Response) => {
 })
 
 // 🔹 GET all questions
-app.get('/questions', async (req: Request, res: Response) => {
+app.get('/questions', async (_req: Request, res: Response) => {
   try {
     const { data, error } = await supabase.from('questions').select('*')
     if (error) throw error
