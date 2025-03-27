@@ -74,15 +74,15 @@ app.post(
   authenticateToken,
   authorizeAdmin,
   async (req: Request, res: Response): Promise<void> => {
-    const { text, category_id } = req.body
-    if (!text || !category_id) {
+    const { question_text, category_id } = req.body
+    if (!question_text || !category_id) {
       res.status(400).json({ error: 'Text and category_id are required' })
       return
     }
     try {
       const { data, error } = await supabase
         .from('questions')
-        .insert([{ text, category_id }])
+        .insert([{ question_text, category_id }])
         .select()
       if (error) throw error
       res.status(201).json(data)
