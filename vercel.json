@@ -1,11 +1,10 @@
 {
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/server/api.ts" }
-  ],
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/server/api.ts" }],
   "build": {
     "env": {
       "SUPABASE_URL": "https://gmthvtufikzxlrlsyvzw.supabase.co",
       "SUPABASE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdtdGh2dHVmaWt6eGxybHN5dnp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI4MjIyMzgsImV4cCI6MjA1ODM5ODIzOH0.pegl-Z-ldwd-XS0syysewg2JjKpXJGpxFRU47wFK2LU"
     }
-  }
+  },
+  "buildCommand": "npm install --legacy-peer-deps && npm run build"
 }
