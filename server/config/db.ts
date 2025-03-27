@@ -8,7 +8,7 @@ if (!process.env.SUPABASE_URL || !process.env.SUPABASE_KEY) {
 }
 
 const supabase = createClient(
-  process.env.SUPABASE_URL!, // Supabase URL from your project settings
+  process.env.SUPABASE_URL!,
   process.env.SUPABASE_KEY!, {
     global:{
       headers: {

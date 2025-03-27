@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "CommonJS",
+    "moduleResolution": "Node",
     "esModuleInterop": true, // Enable esModuleInterop
     "skipLibCheck": true, // Skip type checking of declaration files
     "strict": true, // Enable strict type-checking options
