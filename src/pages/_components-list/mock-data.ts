@@ -1,6 +1,6 @@
 // select
 
-import { Option } from '@/shared'
+import { Option } from '@/shared';
 
 export const selectData: Option[] = [
   { label: 'HTML', value: '1' },
@@ -11,4 +11,4 @@ export const selectData: Option[] = [
   { label: 'React', value: '6' },
   { label: 'computerScience', value: '7' },
   { label: 'Все категории', value: '8' },
-]
+];

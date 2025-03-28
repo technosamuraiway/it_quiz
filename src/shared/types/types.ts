@@ -8,22 +8,22 @@ export enum CATEGORIES {
   COMPUTER_SCIENCE = 'computerScience',
 }
 
-export type QuizQuestions = Question[]
+export type QuizQuestions = Question[];
 
 export type Answer = {
-  id: string
-  title: string
-  isCorrect: boolean
-}
+  id: string;
+  title: string;
+  isCorrect: boolean;
+};
 
 export type Question = {
-  id: number
-  category: CATEGORIES
-  title: string
-  answers: Answer[]
-  docLinks: string[]
-  comments: string[]
-}
+  id: number;
+  category: CATEGORIES;
+  title: string;
+  answers: Answer[];
+  docLinks: string[];
+  comments: string[];
+};
 
-export type Nullable<T> = T | null
-export type Undefinable<T> = T | undefined
+export type Nullable<T> = T | null;
+export type Undefinable<T> = T | undefined;

@@ -1,6 +1,6 @@
-import s from './footer.module.scss'
-import Typography from '@/shared/ui/typography'
-import { buildDeployDate } from '@/shared'
+import s from './footer.module.scss';
+import Typography from '@/shared/ui/typography';
+import { buildDeployDate } from '@/shared';
 
 export function Footer() {
   return (
@@ -12,5 +12,5 @@ export function Footer() {
         technosamuraiway
       </Typography>
     </div>
-  )
+  );
 }

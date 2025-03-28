@@ -1,20 +1,20 @@
-import { ReactNode, Ref } from 'react'
+import { ReactNode, Ref } from 'react';
 
-import * as S from '@radix-ui/react-scroll-area'
-import { clsx } from 'clsx'
+import * as S from '@radix-ui/react-scroll-area';
+import { clsx } from 'clsx';
 
-import s from './scrollbar.module.scss'
+import s from './scrollbar.module.scss';
 
 type Props = {
-  children: ReactNode
-  className?: string
+  children: ReactNode;
+  className?: string;
   /** maxHeight viewport in rems */
-  maxHeight?: number | string
+  maxHeight?: number | string;
   /** maxWidth viewport in rems */
-  maxWidth?: number | string
-  type?: S.ScrollAreaProps['type']
-  ref?: Ref<HTMLDivElement>
-}
+  maxWidth?: number | string;
+  type?: S.ScrollAreaProps['type'];
+  ref?: Ref<HTMLDivElement>;
+};
 
 export const Scrollbar = ({
   children,
@@ -30,12 +30,12 @@ export const Scrollbar = ({
     scrollbar: s.scrollbar,
     thumb: s.thumb,
     viewport: s.viewport,
-  }
+  };
 
-  const maxHeightConverted = typeof maxHeight === 'number' ? `${maxHeight}rem` : maxHeight
-  const maxWidthConverted = typeof maxWidth === 'number' ? `${maxWidth}rem` : maxWidth
+  const maxHeightConverted = typeof maxHeight === 'number' ? `${maxHeight}rem` : maxHeight;
+  const maxWidthConverted = typeof maxWidth === 'number' ? `${maxWidth}rem` : maxWidth;
 
-  const viewportStyles = { maxHeight: maxHeightConverted, maxWidth: maxWidthConverted }
+  const viewportStyles = { maxHeight: maxHeightConverted, maxWidth: maxWidthConverted };
 
   return (
     <S.Root asChild ref={ref} type={type}>
@@ -51,8 +51,8 @@ export const Scrollbar = ({
         </S.Scrollbar>
       </div>
     </S.Root>
-  )
-}
+  );
+};
 
 /* displayName для более понятной отладки в React DevTools */
-Scrollbar.displayName = 'CustomVerticalScrollBar'
+Scrollbar.displayName = 'CustomVerticalScrollBar';

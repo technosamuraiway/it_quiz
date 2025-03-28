@@ -1,16 +1,16 @@
-import clsx from 'clsx'
+import clsx from 'clsx';
 
-import s from './page-button.module.scss'
+import s from './page-button.module.scss';
 
 export type NavigationButtonPropsType = {
-  disabled?: boolean
-  onClick: () => void
-}
+  disabled?: boolean;
+  onClick: () => void;
+};
 
 type PageButtonPropsType = {
-  page: number
-  selected: boolean
-} & NavigationButtonPropsType
+  page: number;
+  selected: boolean;
+} & NavigationButtonPropsType;
 
 export const PageButton = ({ disabled, onClick, page = 1, selected }: PageButtonPropsType) => {
   return (
@@ -22,5 +22,5 @@ export const PageButton = ({ disabled, onClick, page = 1, selected }: PageButton
     >
       <span>{page}</span>
     </button>
-  )
-}
+  );
+};

@@ -1,11 +1,11 @@
-import { clsx } from 'clsx'
+import { clsx } from 'clsx';
 
-import s from './navigation-buttons.module.scss'
+import s from './navigation-buttons.module.scss';
 
 type NavigationButtonProps = {
-  disabled: boolean
-  onClick: () => void
-}
+  disabled: boolean;
+  onClick: () => void;
+};
 
 export const PrevButton = ({ disabled, onClick }: NavigationButtonProps) => {
   return (
@@ -17,8 +17,8 @@ export const PrevButton = ({ disabled, onClick }: NavigationButtonProps) => {
     >
       <span>▲</span>
     </button>
-  )
-}
+  );
+};
 
 export const NextButton = ({ disabled, onClick }: NavigationButtonProps) => {
   return (
@@ -30,5 +30,5 @@ export const NextButton = ({ disabled, onClick }: NavigationButtonProps) => {
     >
       <span>▲</span>
     </button>
-  )
-}
+  );
+};

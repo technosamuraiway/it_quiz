@@ -1,1 +1,1 @@
-export * from './primary-pagination-buttons'
+export * from './primary-pagination-buttons';

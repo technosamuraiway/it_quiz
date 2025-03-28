@@ -1,18 +1,18 @@
-import { NextButton, PrevButton } from './navigation-buttons'
-import { PrimaryPaginationButtons } from './primary-pagination-buttons'
-import { usePagination } from './use-pagination'
+import { NextButton, PrevButton } from './navigation-buttons';
+import { PrimaryPaginationButtons } from './primary-pagination-buttons';
+import { usePagination } from './use-pagination';
 
-import s from './pagination.module.scss'
+import s from './pagination.module.scss';
 
 export type PaginationProps = {
-  onChange: (page: number) => void
-  onPerPageChange?: (itemPerPage: string) => void
-  page: number
-  perPage?: number
-  perPageOptions?: string[]
-  siblings?: number
-  totalCount: number
-}
+  onChange: (page: number) => void;
+  onPerPageChange?: (itemPerPage: string) => void;
+  page: number;
+  perPage?: number;
+  perPageOptions?: string[];
+  siblings?: number;
+  totalCount: number;
+};
 
 export const Pagination = ({ onChange, page, siblings, totalCount }: PaginationProps) => {
   const {
@@ -28,7 +28,7 @@ export const Pagination = ({ onChange, page, siblings, totalCount }: PaginationP
     page,
     siblings,
     totalCount,
-  })
+  });
 
   return (
     <div className={s.root}>
@@ -44,5 +44,5 @@ export const Pagination = ({ onChange, page, siblings, totalCount }: PaginationP
         <NextButton disabled={isLastPage || hasNoData} onClick={handleNextPageClicked} />
       </div>
     </div>
-  )
-}
+  );
+};

@@ -1,1 +1,1 @@
-export * from './_components-list'
+export * from './_components-list';
