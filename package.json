@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
-    "preview": "vite preview",
     "dev": "vite",
+    "server:dev": "ts-node server/api.ts",
+    "build-server": "tsc -p tsconfig.node.json",
+    "start": "node dist/server/api.js",
     "format": "prettier --write src",
     "lint": "eslint src --no-error-on-unmatched-pattern --fix && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input",
     "build-deploy-date": "node scripts/build-deploy-date.js",
@@ -28,7 +30,9 @@
     "react-dom": "19.0.0",
     "react-router-dom": "7.2.0",
     "vite-plugin-pwa": "0.21.1",
-    "workbox-window": "7.3.0"
+    "workbox-window": "7.3.0",
+    "@it-incubator/prettier-config": "0.1.2",
+    "@it-incubator/stylelint-config": "2.0.0"
   },
   "devDependencies": {
     "@eslint/js": "9.21.0",

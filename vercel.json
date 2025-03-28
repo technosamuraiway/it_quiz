@@ -1,5 +1,5 @@
 {
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/server/api.ts" }],
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/dist/server/api.js" }],
   "build": {
     "env": {
       "SUPABASE_URL": "https://gmthvtufikzxlrlsyvzw.supabase.co",

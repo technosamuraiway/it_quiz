@@ -1,5 +1,5 @@
-import s from './Home.module.scss';
-import Typography from '../../shared/ui/typography';
+import s from './Home.module.scss'
+import Typography from '../../shared/ui/typography'
 
 const mockCategories = [
   {
@@ -30,7 +30,7 @@ const mockCategories = [
     id: 7,
     title: 'Computer Science',
   },
-];
+]
 
 function Home() {
   return (
@@ -53,7 +53,7 @@ function Home() {
       </div>
       <img className={s.keyboard} src="/keyboard.svg" alt="keyboard" />
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

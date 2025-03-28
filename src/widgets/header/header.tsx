@@ -1,9 +1,9 @@
-import s from './header.module.scss';
-import Typography from '../../shared/ui/typography';
-import { Link, useLocation } from 'react-router-dom';
+import s from './header.module.scss'
+import Typography from '../../shared/ui/typography'
+import { Link, useLocation } from 'react-router-dom'
 
 export function Header() {
-  const location = useLocation();
+  const location = useLocation()
   return (
     <div className={s.header}>
       <Link to={'/'}>
@@ -18,5 +18,5 @@ export function Header() {
         </Typography>
       </div>
     </div>
-  );
+  )
 }

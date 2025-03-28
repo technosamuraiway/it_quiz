@@ -1,4 +1,3 @@
-
 import supabase from '../config/db'
 import { User } from '../custom'
 

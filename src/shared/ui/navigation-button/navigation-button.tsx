@@ -1,10 +1,10 @@
-import { Button } from '@/shared';
-import s from './navigation-button.module.scss';
-import clsx from 'clsx';
+import { Button } from '@/shared'
+import s from './navigation-button.module.scss'
+import clsx from 'clsx'
 
 type Props = {
-  direction: 'left' | 'right';
-};
+  direction: 'left' | 'right'
+}
 
 export const NavigationButton = ({ direction }: Props) => {
   return (
@@ -13,5 +13,5 @@ export const NavigationButton = ({ direction }: Props) => {
         {direction === 'left' ? '◀' : '▶'}
       </span>
     </Button>
-  );
-};
+  )
+}
