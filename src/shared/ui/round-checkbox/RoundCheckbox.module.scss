@@ -1,0 +1,48 @@
+.checkboxContainer {
+  cursor: pointer;
+  user-select: none;
+
+  position: relative;
+
+  display: inline-block;
+
+  min-height: 2.5rem;
+  padding-left: 3.125rem;
+
+  line-height: 2.5rem;
+
+  .hiddenInput {
+    cursor: pointer;
+
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1.5px solid var(--color-accent-main);
+    border-radius: 50%;
+
+    background-color: white;
+
+    transition: all 0.3s ease;
+  }
+
+  .hiddenInput:checked ~ .checkmark {
+    background-color: var(--color-success-main);
+  }
+
+  .hiddenInput:active ~ .checkmark {
+    transform: scale(0.95);
+  }
+}
