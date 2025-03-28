@@ -1,5 +1,6 @@
 import s from './Home.module.scss'
 import Typography from '../../shared/ui/typography'
+import { Categories } from '@/widgets/categories'
 
 const mockCategories = [
   {
@@ -35,13 +36,7 @@ const mockCategories = [
 function Home() {
   return (
     <div className={s.contentBlock}>
-      <div className={s.title}>
-        <div></div>
-        <Typography weight={'medium'} variant={'h1'}>
-          Категории
-        </Typography>
-        <div></div>
-      </div>
+      <Categories />
       <div className={s.categories}>
         {mockCategories.map((category: { id: number; title: string }) => (
           <div key={category.id} className={s.category}>
