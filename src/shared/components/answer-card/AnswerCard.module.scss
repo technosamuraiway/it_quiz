@@ -1,0 +1,16 @@
+.answerCard {
+  display: flex;
+  align-items: center;
+  padding: 1.4375rem;
+
+  & > h3 {
+    @media (width <= 860px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (width <= 860px) {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+  }
+}
