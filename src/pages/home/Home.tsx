@@ -1,5 +1,6 @@
 import s from './Home.module.scss'
-import Typography from '../../shared/components/typography'
+import Typography from '../../shared/ui/typography'
+import { Categories } from '@/widgets/categories'
 
 const mockCategories = [
   {
@@ -33,52 +34,19 @@ const mockCategories = [
 ]
 
 function Home() {
-  function formatDateToCustomFormat(date: Date): string {
-    const day = String(date.getDate()).padStart(2, '0')
-    const month = String(date.getMonth() + 1).padStart(2, '0')
-    const year = String(date.getFullYear()).slice(-2)
-
-    return `${year}${month}${day}`
-  }
   return (
-    <div className={s.container}>
-      <div className={s.contentBlock}>
-        <div className={s.header}>
-          <div>
-            <Typography weight={'medium'} pointer variant={'h1'} underline>
-              главная
-            </Typography>
-            <Typography weight={'medium'} pointer variant={'h1'}>
-              вопросы
+    <div className={s.contentBlock}>
+      <Categories />
+      <div className={s.categories}>
+        {mockCategories.map((category: { id: number; title: string }) => (
+          <div key={category.id} className={s.category}>
+            <Typography weight={'normal'} variant={'h2'}>
+              {category.title}
             </Typography>
           </div>
-        </div>
-        <div className={s.title}>
-          <div></div>
-          <Typography weight={'medium'} variant={'h2'}>
-            Категории
-          </Typography>
-          <div></div>
-        </div>
-        <div className={s.categories}>
-          {mockCategories.map((category: any) => (
-            <div key={category.id} className={s.category}>
-              <Typography weight={'normal'} variant={'h2'}>
-                {category.title}
-              </Typography>
-            </div>
-          ))}
-        </div>
-        <img src="/keyboard.svg" alt="keyboard" />
-        <div className={s.footer}>
-          <Typography variant={'h3'} weight={'normal'}>
-            build:{formatDateToCustomFormat(new Date())}
-          </Typography>
-          <Typography variant={'h3'} weight={'normal'}>
-            technosamuraiway
-          </Typography>
-        </div>
+        ))}
       </div>
+      <img className={s.keyboard} src="/keyboard.svg" alt="keyboard" />
     </div>
   )
 }

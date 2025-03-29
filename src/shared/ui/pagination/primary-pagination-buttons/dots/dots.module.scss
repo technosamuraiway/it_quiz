@@ -1,0 +1,5 @@
+@use '../../../../../app/styles/mixins' as mixin;
+
+.dots {
+  @include mixin.pagination-button;
+}

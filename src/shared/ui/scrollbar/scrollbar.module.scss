@@ -1,0 +1,63 @@
+.root {
+  overflow: hidden;
+}
+
+.viewport {
+  width: 100%;
+  height: 100%;
+}
+
+.scrollbar {
+  touch-action: none;
+  user-select: none;
+  display: flex;
+}
+
+.scrollbar[data-orientation='vertical'] {
+  width: 0.875rem;
+  padding: 0.1875rem 0;
+}
+
+.scrollbar[data-orientation='horizontal'] {
+  flex-direction: column;
+  height: 0.875rem;
+  padding: 0 0.1875rem;
+}
+
+.thumb {
+  cursor: pointer;
+
+  position: relative;
+
+  flex-grow: 1;
+
+  padding: 0 0.3125rem;
+  border-radius: 0.3125rem;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+
+    width: 0.25rem;
+    height: 100%;
+    border-radius: 0.3125rem;
+
+    background-color: var(--color-hollow-main);
+
+    transition: 0.6ms background-color;
+
+    [data-orientation='horizontal'] & {
+      width: 100%;
+      height: 0.25rem;
+    }
+  }
+
+  [data-orientation='horizontal'] & {
+    padding: 0.3125rem 0;
+  }
+
+  &:hover::before {
+    background-color: var(--color-font-main);
+  }
+}

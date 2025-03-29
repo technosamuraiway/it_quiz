@@ -1,0 +1,9 @@
+.arrow {
+  transform: translateX(0.2rem);
+  font-size: 1.8rem;
+  color: currentcolor;
+
+  &Left {
+    transform: translateX(-0.2rem);
+  }
+}

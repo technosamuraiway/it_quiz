@@ -1,0 +1,55 @@
+.contentBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8125rem;
+  align-items: center;
+
+  width: 100%;
+  max-width: 87.5rem;
+  margin-top: 4.8125rem;
+
+  @media (width <= 860px) {
+    gap: 2.8125rem;
+    margin-top: 3.8125rem;
+  }
+}
+
+.paginationBlock {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.answerCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.noteBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: start;
+
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.noteText {
+  @media (width <= 860px) {
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+  }
+}
+
+.link {
+  display: inline-block;
+  max-width: 100%;
+}

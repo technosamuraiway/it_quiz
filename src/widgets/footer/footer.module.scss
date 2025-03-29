@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 87.5rem;
+  height: 100%;
+  margin-top: 4.8125rem;
+  border-top: 1px solid var(--color-dark-650);
+
+  @media (width <= 860px) {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 3.8125rem;
+  }
+}

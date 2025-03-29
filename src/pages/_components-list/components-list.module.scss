@@ -1,0 +1,26 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  padding-top: 1rem;
+
+  background-color: var(--color-bg-main);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+
+  width: 800px;
+  padding: 1rem;
+  border: 1px solid black;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

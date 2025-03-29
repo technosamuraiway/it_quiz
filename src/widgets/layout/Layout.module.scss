@@ -1,0 +1,12 @@
+@use '../../app/styles/mixins' as mixins;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  @include mixins.container;
+}

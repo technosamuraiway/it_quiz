@@ -1,1 +1,1 @@
-export * from './mock-page'
+export * from './question-card'
