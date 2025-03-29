@@ -1,12 +1,13 @@
-import express from 'express';
-import cors from 'cors';
-import { Request, Response } from 'express';
-import authRoutes from './routes/authRoutes.js';
+import express from 'express'
+import cors from 'cors'
+import { Request, Response } from 'express'
+import authRoutes from './routes/authRoutes.js'
 import supabase from './config/db.js'
 import { authenticateToken, authorizeAdmin } from './middleware/authMiddleware.js'
-import * as dotenv from 'dotenv';
-dotenv.config();
+import * as dotenv from 'dotenv'
+import serverless from 'serverless-http' // Import serverless-http
 
+dotenv.config()
 
 const app = express()
 
@@ -124,6 +125,5 @@ app.post(
   }
 )
 
-// Start server
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`))
+// Wrap the Express app with serverless handler for deployment on Vercel
+export const handler = serverless(app) // Export the handler for serverless
