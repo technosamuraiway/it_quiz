@@ -17,12 +17,13 @@ export type Answer = {
 }
 
 export type Question = {
+  code?: string
   id: number
-  category: CATEGORIES
+  category?: CATEGORIES
   title: string
-  answers: Answer[]
-  docLinks: string[]
-  comments: string[]
+  answers?: Answer[]
+  docLinks?: string[]
+  comments?: string[]
 }
 
 export type Nullable<T> = T | null

@@ -1,0 +1,44 @@
+.questionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  & > h1 {
+    @media (width <= 860px) {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (width <= 860px) {
+    padding: 1rem;
+  }
+}
+
+.border {
+  border: none;
+}
+
+@media (width <= 860px) {
+  .codeBlock {
+    padding: 0.25rem 0 !important;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  margin-top: 1rem;
+
+  & > button {
+    cursor: pointer;
+    min-width: 9.25rem;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  @media (width <= 860px) {
+    justify-content: center;
+  }
+}

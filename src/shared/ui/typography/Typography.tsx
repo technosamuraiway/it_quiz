@@ -28,6 +28,7 @@ export type ColorType =
   | 'pink'
   | 'separator'
   | 'grey-dark'
+  | 'accent-main'
 export type TypographyProps = {
   variant?: VariantsType
   children?: ReactNode
