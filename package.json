@@ -4,17 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && pnpm run build-server",
     "dev": "vite",
-    "server:dev": "ts-node server/api.ts",
+    "server:dev": "ts-node-esm server/api.ts",
     "build-server": "tsc -p tsconfig.node.json",
-    "start": "node dist/server/api.js",
+    "start": "node -r dotenv/config dist/server/api.js",
     "format": "prettier --write src",
     "lint": "eslint src --no-error-on-unmatched-pattern --fix && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input",
     "build-deploy-date": "node scripts/build-deploy-date.js",
     "build-with-date": "npm run build-deploy-date && npm run build"
   },
   "dependencies": {
+    "@it-incubator/prettier-config": "0.1.2",
+    "@it-incubator/stylelint-config": "2.0.0",
     "@radix-ui/react-scroll-area": "1.2.3",
     "@radix-ui/react-select": "2.1.6",
     "@supabase/supabase-js": "^2.49.1",
@@ -31,9 +33,7 @@
     "react-router-dom": "7.2.0",
     "react-syntax-highlighter": "^15.6.1",
     "vite-plugin-pwa": "0.21.1",
-    "workbox-window": "7.3.0",
-    "@it-incubator/prettier-config": "0.1.2",
-    "@it-incubator/stylelint-config": "2.0.0"
+    "workbox-window": "7.3.0"
   },
   "devDependencies": {
     "@eslint/js": "9.21.0",
@@ -56,6 +56,7 @@
     "prettier": "^3.5.3",
     "sass": "1.85.1",
     "stylelint": "16.14.1",
+    "ts-node": "^10.9.2",
     "typescript": "5.7.2",
     "typescript-eslint": "8.24.1",
     "vite": "6.2.0"

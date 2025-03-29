@@ -1,5 +1,4 @@
-import supabase from '../config/db'
-import { User } from '../custom'
+import supabase from '../config/db.js'
 
 // Get user by username function (including is_admin field)
 export const getUserByUsername = async (username: string): Promise<User | null> => {

@@ -1,8 +1,7 @@
-import bcrypt from 'bcryptjs'
-import jwt from 'jsonwebtoken'
+import * as bcrypt from 'bcryptjs';
+import * as jwt from 'jsonwebtoken';
 import { Request, Response } from 'express'
-import { User } from '../custom'
-import { getUserByUsername } from '../models/userModel'
+import { getUserByUsername } from '../models/userModel.js'
 
 export const login = async (req: Request, res: Response): Promise<Response> => {
   const { username, password } = req.body

@@ -1,5 +1,4 @@
 // server/custom.d.ts (or src/custom.d.ts, depending on your project structure)
-import { Request } from 'express';
 
 // Define the User interface based on your app's needs
 interface User {

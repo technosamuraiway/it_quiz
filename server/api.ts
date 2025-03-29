@@ -1,9 +1,12 @@
-require('dotenv').config()
-import express, { Request, Response } from 'express'
-import cors from 'cors'
-import authRoutes from './routes/authRoutes'
-import supabase from './config/db'
-import { authenticateToken, authorizeAdmin } from './middleware/authMiddleware'
+import express from 'express';
+import cors from 'cors';
+import { Request, Response } from 'express';
+import authRoutes from './routes/authRoutes.js';
+import supabase from './config/db.js'
+import { authenticateToken, authorizeAdmin } from './middleware/authMiddleware.js'
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 
 const app = express()
 
@@ -15,7 +18,7 @@ app.use(cors())
 app.use('/auth', authRoutes)
 
 // Default route
-app.get('/', (_req, res) => {
+app.get('/', (_req: Request, res: Response) => {
   res.send('Welcome to the IT Quiz API')
 })
 

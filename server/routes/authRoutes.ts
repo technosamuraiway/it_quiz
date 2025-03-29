@@ -1,6 +1,6 @@
 // server/routes/authRoutes.ts
 import express, { Request, Response } from 'express' // Importing express along with types
-import { login } from '../controllers/authController'
+import { login } from '../controllers/authController.js'
 
 const router = express.Router()
 
