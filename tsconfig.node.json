@@ -22,7 +22,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["server/**/*.ts", "server/custom.d.ts"],
+  "include": ["api/**/*.ts", "api/custom.d.ts"],
   "exclude": ["node_modules"],
   "type": "module"
 }
