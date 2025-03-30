@@ -13,7 +13,7 @@ export const LinkBlock = ({ links }: Props) => {
       <div className={s.title}>
         <LinkIcon height={'1.5rem'} width={'1.5rem'} />
         <Typography variant={'h2'} weight={'medium'}>
-          Ссылки на документацию
+          Документация
         </Typography>
       </div>
 

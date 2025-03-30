@@ -13,6 +13,8 @@
 }
 
 .variant-quiz-card {
+  cursor: pointer;
+
   display: inline-block;
 
   padding: 1.625rem 0.5rem;
@@ -23,13 +25,18 @@
 }
 
 .variant-default {
+  cursor: pointer;
+
   padding: 0.5rem;
   border: solid 0.125rem var(--color-accent-main);
   border-radius: 0.6rem;
+
   background-color: var(--color-light-main);
 }
 
 .variant-navigation {
+  cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;

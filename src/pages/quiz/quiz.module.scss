@@ -3,3 +3,15 @@
 .root {
   @include mixin.content-block;
 }
+
+.buttonsBlock {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 2rem;
+}
+
+.answerButton {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+}
