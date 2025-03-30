@@ -1,0 +1,25 @@
+@use '../../../app/styles/mixins' as mixin;
+
+.root {
+  width: 100%;
+}
+
+.title {
+  @include mixin.question-note-and-link-blocks-titles;
+}
+
+.linkItem {
+  margin-bottom: 0.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.link {
+  color: var(--color-accent-main);
+
+  &:visited {
+    color: var(--color-accent-main);
+  }
+}

@@ -1,0 +1,9 @@
+@use '../../../app/styles/mixins' as mixin;
+
+.title {
+  @include mixin.question-note-and-link-blocks-titles;
+}
+
+.content {
+  text-align: justify;
+}

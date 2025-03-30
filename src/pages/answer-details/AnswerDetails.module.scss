@@ -26,30 +26,3 @@
   gap: 1.25rem;
   align-items: center;
 }
-
-.noteBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  align-items: start;
-
-  width: 100%;
-}
-
-.title {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.noteText {
-  @media (width <= 860px) {
-    flex-wrap: wrap;
-    font-size: 0.875rem;
-  }
-}
-
-.link {
-  display: inline-block;
-  max-width: 100%;
-}

@@ -73,3 +73,10 @@ $mobile: 48rem;
     background-color: var(--color-accent-main-rgb);
   }
 }
+
+@mixin question-note-and-link-blocks-titles {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
