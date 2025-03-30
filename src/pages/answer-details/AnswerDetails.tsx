@@ -1,10 +1,9 @@
 import s from './AnswerDetails.module.scss'
 import { Categories } from '@/shared/components/categories'
-import { Answer, QuestionCard } from '@/shared'
+import { Answer, QuestionCard, mockQuestions } from '@/shared'
 import { Link, useParams } from 'react-router-dom'
 import { AnswerCard } from '@/shared/components/answer-card'
 import Typography from '@/shared/ui/typography'
-import { mockQuestions } from '@/pages/questions/mockValues'
 
 const mockAnswers: Answer[] = [
   {

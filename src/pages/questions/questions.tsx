@@ -3,7 +3,7 @@ import { Categories } from '@/shared/components/categories'
 import { selectData } from '@/pages/_components-list/mock-data'
 import { Pagination, QuestionCard, Select } from '@/shared'
 import { useState } from 'react'
-import { mockQuestions } from '@/pages/questions/mockValues'
+import { mockQuestions } from '@/shared/mock-data/mock-questions'
 
 export function Questions() {
   const [categoryValue, setCategoryValue] = useState(selectData[7].value)
