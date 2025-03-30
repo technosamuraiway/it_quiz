@@ -4,13 +4,13 @@ import { buildDeployDate } from '@/shared'
 
 export function Footer() {
   return (
-    <div className={s.footer}>
+    <footer className={s.footer}>
       <Typography variant={'h3'} weight={'normal'}>
         build:{buildDeployDate}
       </Typography>
       <Typography variant={'h3'} weight={'normal'}>
         technosamuraiway
       </Typography>
-    </div>
+    </footer>
   )
 }

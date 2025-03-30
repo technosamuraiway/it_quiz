@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Home from '@/pages/home'
-import { ComponentsList } from '@/pages'
+import { ComponentsList, Quiz } from '@/pages'
 import Layout from '@/widgets/layout'
 import Questions from '@/pages/questions'
 import AnswerDetails from '../pages/answer-details'
@@ -13,6 +13,10 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/quiz',
+        element: <Quiz />,
       },
       {
         path: '/questions',

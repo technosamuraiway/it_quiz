@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 export function Header() {
   const location = useLocation()
   return (
-    <div className={s.header}>
+    <header className={s.header}>
       <Link to={'/'}>
         <img height={80} className={s.logoImage} width={190} src="/logoQuiz.svg" alt="logo" />
       </Link>
@@ -32,6 +32,6 @@ export function Header() {
           </Typography>
         </Link>
       </div>
-    </div>
+    </header>
   )
 }

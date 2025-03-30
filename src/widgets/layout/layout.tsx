@@ -1,13 +1,15 @@
 import { Outlet } from 'react-router-dom'
 
-import s from './Layout.module.scss'
+import s from './layout.module.scss'
 import { Footer, Header } from '@/widgets'
 
 function Layout() {
   return (
     <div className={s.container}>
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   )
