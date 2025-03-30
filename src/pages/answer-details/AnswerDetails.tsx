@@ -1,5 +1,5 @@
 import s from './AnswerDetails.module.scss'
-import { Categories } from '@/widgets/categories'
+import { Categories } from '@/shared/components/categories'
 import { Answer, QuestionCard } from '@/shared'
 import { Link, useParams } from 'react-router-dom'
 import { AnswerCard } from '@/shared/components/answer-card'

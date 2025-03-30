@@ -1,0 +1,32 @@
+.title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    flex-grow: 1;
+    height: 0.0625rem;
+    background-color: var(--color-dark-650);
+  }
+
+  &::before {
+    margin-right: 1.375rem;
+  }
+
+  &::after {
+    margin-left: 1.375rem;
+  }
+}
+
+.categoryText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @media (width <= 860px) {
+    font-size: 1.75rem;
+  }
+}

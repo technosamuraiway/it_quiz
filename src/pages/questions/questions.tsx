@@ -1,11 +1,11 @@
-import s from './Questions.module.scss'
-import { Categories } from '@/widgets/categories'
+import s from './questions.module.scss'
+import { Categories } from '@/shared/components/categories'
 import { selectData } from '@/pages/_components-list/mock-data'
 import { Pagination, QuestionCard, Select } from '@/shared'
 import { useState } from 'react'
 import { mockQuestions } from '@/pages/questions/mockValues'
 
-function Questions() {
+export function Questions() {
   const [categoryValue, setCategoryValue] = useState(selectData[7].value)
   const [page, setPage] = useState(1)
   const totalCount = 10
@@ -22,5 +22,3 @@ function Questions() {
     </div>
   )
 }
-
-export default Questions

@@ -1,6 +1,6 @@
 import s from './home.module.scss'
 import Typography from '../../shared/ui/typography'
-import { Categories } from '@/widgets/categories'
+import { Categories } from '@/shared/components/categories'
 import { categories } from '@/shared'
 import { Link } from 'react-router-dom'
 
@@ -11,7 +11,7 @@ function Home() {
       <ul className={s.categories}>
         {categories.map((category: { id: string; title: string }) => (
           <li key={category.id} className={s.category}>
-            <Link to={`/quiz/${category.id}`}>
+            <Link to={`/quiz/${category.id}`} className={s.link}>
               <Typography weight={'normal'} variant={'h2'}>
                 {category.title}
               </Typography>

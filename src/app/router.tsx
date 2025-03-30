@@ -1,9 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Home from '@/pages/home'
-import { ComponentsList, Quiz } from '@/pages'
-import Layout from '@/widgets/layout'
-import Questions from '@/pages/questions'
+import { ComponentsList, Questions, Quiz } from '@/pages'
 import AnswerDetails from '../pages/answer-details'
+import { Layout } from './layout'
 
 export const router = createBrowserRouter([
   {

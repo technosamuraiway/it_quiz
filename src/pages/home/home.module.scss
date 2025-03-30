@@ -40,18 +40,24 @@
 .category {
   cursor: pointer;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   width: 11.75rem;
   height: 5.6875rem;
   border: 2px solid var(--color-info-450);
   border-radius: 0.625rem;
 
-  text-align: center;
-
   background-color: var(--color-light-100);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+
+  text-align: center;
 }
 
 .keyboard {

@@ -1,5 +1,5 @@
 import s from './quiz.module.scss'
-import { Categories } from '@/widgets/categories'
+import { Categories } from '@/shared/components/categories'
 import { useParams } from 'react-router-dom'
 import { categoriesObject } from '@/shared'
 
