@@ -18,6 +18,7 @@ export const Quiz = () => {
   const { id } = useParams()
 
   const [currentQuestion, setCurrentQuestion] = useState('1')
+  const [currentAnswer, setCurrentAnswer] = useState<string | null>(null)
 
   return (
     <div className={s.root}>
@@ -26,11 +27,20 @@ export const Quiz = () => {
       <QuestionsPagination questionsMap={questionsMap} currentQuestion={currentQuestion} />
 
       <div className={s.buttonsBlock}>
-        <NavigationButton direction={'left'} />
-        <Button variant={'variant-default'} type={'button'} className={s.answerButton}>
+        <NavigationButton
+          direction={'left'}
+          disabled={currentQuestion === '1'}
+          onClick={() => {}}
+        />
+        <Button
+          variant={'variant-default'}
+          type={'button'}
+          className={s.answerButton}
+          disabled={!currentAnswer}
+        >
           Ответить
         </Button>
-        <NavigationButton direction={'right'} />
+        <NavigationButton direction={'right'} disabled={currentQuestion === '10'} />
       </div>
 
       <NoteBlock
