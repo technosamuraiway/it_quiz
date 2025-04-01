@@ -4,6 +4,7 @@ import { ComponentsList } from '@/pages'
 import Layout from '@/widgets/layout'
 import Questions from '@/pages/questions'
 import AnswerDetails from '../pages/answer-details'
+import AdminPanel from '@/pages/admin-panel/AdminPanel'
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: '/components',
         element: <ComponentsList />,
+      },
+      {
+        path: '/admin',
+        element: <AdminPanel />,
       },
     ],
   },

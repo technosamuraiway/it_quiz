@@ -1,0 +1,82 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "category_name": "JavaScript"
+    },
+    {
+      "id": "2",
+      "category_name": "React"
+    },
+    {
+      "id": "3",
+      "category_name": "Тестировщик"
+    },
+    {
+      "id": "1",
+      "category_name": "привет"
+    },
+    {
+      "id": "4",
+      "category_name": "QA"
+    },
+    {
+      "id": 5,
+      "category_name": "QA"
+    }
+  ],
+  "questions": [
+    {
+      "id": "1",
+      "question_text": "Что такое замыкание?",
+      "category_id": 1,
+      "code": ""
+    },
+    {
+      "id": "2",
+      "question_text": "Какой хук используется для управления состоянием?",
+      "category_id": 2,
+      "code": "",
+      "answer_descr": "some description",
+      "docs": "some link for documentation"
+    }
+  ],
+  "answers": [
+    {
+      "id": "1",
+      "question_id": 1,
+      "text": "Функция внутри функции, которая запоминает окружение",
+      "is_correct": true
+    },
+    {
+      "id": "2",
+      "question_id": 1,
+      "text": "Глобальная переменная",
+      "is_correct": false
+    },
+    {
+      "id": "3",
+      "question_id": 1,
+      "text": "Способ работы с классами",
+      "is_correct": false
+    },
+    {
+      "id": "4",
+      "question_id": 2,
+      "text": "useState",
+      "is_correct": true
+    },
+    {
+      "id": "5",
+      "question_id": 2,
+      "text": "useEffect",
+      "is_correct": false
+    },
+    {
+      "id": "6",
+      "question_id": 2,
+      "text": "useContext",
+      "is_correct": false
+    }
+  ]
+}
