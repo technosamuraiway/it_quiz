@@ -11,6 +11,26 @@
     {
       "id": 3,
       "category_name": "QA"
+    },
+    {
+      "id": 4,
+      "category_name": "Computer Science"
+    },
+    {
+      "id": 5,
+      "category_name": "TypeScript"
+    },
+    {
+      "id": 6,
+      "category_name": "HTML"
+    },
+    {
+      "id": 7,
+      "category_name": "CSS"
+    },
+    {
+      "id": 8,
+      "category_name": "GIT"
     }
   ],
   "questions": [
