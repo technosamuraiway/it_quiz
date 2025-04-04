@@ -1,3 +1,4 @@
+import { getApiUrl } from '@/config/config'
 import { useEffect, useState } from 'react'
 
 interface Category {
@@ -27,9 +28,9 @@ interface QuizData {
   answers: Answer[]
 }
 
-const API_URL = 'http://localhost:5000' // Укажи порт, на котором работает json-server
 
 const useQuizData = () => {
+  const API_URL = getApiUrl()
   const [data, setData] = useState<QuizData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -163,6 +164,36 @@ const useQuizData = () => {
     return data ? data.answers.filter(a => a.question_id === question_id) : []
   }
 
+  const fetchAllDataFromRemote = async () => {
+    try {
+      setLoading(true)
+  
+      const [categoriesRes, questionsRes, answersRes] = await Promise.all([
+        fetch(`${API_URL}/categories`),
+        fetch(`${API_URL}/questions`),
+        fetch(`${API_URL}/answers`)
+      ])
+  
+      if (!categoriesRes.ok || !questionsRes.ok || !answersRes.ok) {
+        throw new Error('Ошибка при загрузке данных')
+      }
+  
+      const [categories, questions, answers] = await Promise.all([
+        categoriesRes.json(),
+        questionsRes.json(),
+        answersRes.json()
+      ])
+  
+      const fullData: QuizData = { categories, questions, answers }
+      setData(fullData)
+      setLoading(false)
+    } catch (err) {
+      console.error('Ошибка при получении данных с сервера:', err)
+      setLoading(false)
+    }
+  }
+  
+
   return {
     data,
     loading,
@@ -175,6 +206,7 @@ const useQuizData = () => {
     updateQuestionCategory,
     getQuestionsByCategory,
     getAnswersByQuestion,
+    fetchAllDataFromRemote
   }
 }
 

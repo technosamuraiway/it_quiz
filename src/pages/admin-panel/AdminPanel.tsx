@@ -10,7 +10,8 @@ const AdminPanel = () => {
     deleteQuestion,
     updateAnswer,
     updateQuestionCategory,
-    getQuestionsByCategory
+    getQuestionsByCategory,
+    fetchAllDataFromRemote
   } = useQuizData();
 
   const [question, setQuestion] = useState('');
@@ -25,8 +26,12 @@ const AdminPanel = () => {
   const [newCategory, setNewCategory] = useState('');
 
   useEffect(() => {
+    fetchAllDataFromRemote();
+    console.log('data', data);
     console.log('categories', getQuestionsByCategory(1));
     console.log('questions', data?.questions);
+
+    console.log(data);
   }, [data]);
 
   const handleAddQuestion = () => {
