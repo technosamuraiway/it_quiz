@@ -1,11 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+import { readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 
 
-const dbPath = path.join(process.cwd(), 'db.json');
+const dbPath = join(process.cwd(), 'db.json');
 
-module.exports = async (req, res) => {
-  const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+export default async (req, res) => {
+  const data = JSON.parse(readFileSync(dbPath, 'utf8'));
 
   if (req.method === 'GET') {
     return res.status(200).json(data.questions || []);
@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
     const newQuestion = { ...body, id: Date.now() };
     data.questions.push(newQuestion);
 
-    fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+    writeFileSync(dbPath, JSON.stringify(data, null, 2));
     return res.status(201).json(newQuestion);
   }
 

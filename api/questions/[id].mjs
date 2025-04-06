@@ -1,16 +1,16 @@
-const fs = require('fs');
-const path = require('path');
+import { readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 
 
-const dbPath = path.join(process.cwd(), 'db.json');
+const dbPath = join(process.cwd(), 'db.json');
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   const {
     query: { id },
     method,
   } = req;
 
-  const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+  const data = JSON.parse(readFileSync(dbPath, 'utf8'));
   const questions = data.questions || [];
   const questionIndex = questions.findIndex(q => q.id == id);
 
@@ -24,13 +24,13 @@ module.exports = async (req, res) => {
 
   if (method === 'PUT') {
     questions[questionIndex] = { ...questions[questionIndex], ...req.body };
-    fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+    writeFileSync(dbPath, JSON.stringify(data, null, 2));
     return res.status(200).json(questions[questionIndex]);
   }
 
   if (method === 'DELETE') {
     questions.splice(questionIndex, 1);
-    fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+    writeFileSync(dbPath, JSON.stringify(data, null, 2));
     return res.status(204).end();
   }
 
