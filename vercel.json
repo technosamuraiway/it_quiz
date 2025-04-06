@@ -2,26 +2,26 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/**/*.mjs",
+      "src": "api/**/*.cjs",
       "use": "@vercel/node"
     },
     {
-      "src": "src/**/*.{mjs,ts,jsx,tsx}",
+      "src": "src/**/*.{cjs,ts,jsx,tsx}",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/questions",
-      "dest": "/api/questions/index.mjs"
+      "dest": "/api/questions/index.cjs"
     },
     {
       "src": "/api/questions/(.*)",
-      "dest": "/api/questions/[id].mjs"
+      "dest": "/api/questions/[id].cjs"
     },
     {
       "src": "/api/categories",
-      "dest": "/api/categories/index.mjs"
+      "dest": "/api/categories/index.cjs"
     }
   ]
 }

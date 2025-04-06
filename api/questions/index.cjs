@@ -1,9 +1,9 @@
-import { readFileSync, writeFileSync } from 'fs';
-import { join } from 'path';
+const { readFileSync, writeFileSync } = require('fs');
+const { join } = require('path');
 
 const dbPath = join(process.cwd(), 'db.json');
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   // Устанавливаем заголовки для поддержки CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
