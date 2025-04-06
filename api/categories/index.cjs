@@ -1,6 +1,7 @@
 const { readFileSync, writeFileSync } = require('fs');
 const { join } = require('path');
 
+// Путь к файлу db.json в временной директории на Vercel
 const dbPath = 'tmp/db.json';
 
 module.exports = async (req, res) => {
@@ -17,8 +18,10 @@ module.exports = async (req, res) => {
   try {
     const data = JSON.parse(readFileSync(dbPath, 'utf8'));
 
-    // Обработка GET-запроса
+    // Кеширование данных на сервере
     if (req.method === 'GET') {
+      // Устанавливаем заголовки кеширования
+      res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate=30');
       return res.status(200).json(data.categories || []);
     }
 
@@ -50,4 +53,3 @@ module.exports = async (req, res) => {
     res.status(500).json({ message: 'Internal Server Error', error: error.message });
   }
 };
-
