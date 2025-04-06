@@ -1,10 +1,28 @@
 {
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/dist/server/api.js" }],
-  "build": {
-    "env": {
-      "SUPABASE_URL": "https://gmthvtufikzxlrlsyvzw.supabase.co",
-      "SUPABASE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdtdGh2dHVmaWt6eGxybHN5dnp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI4MjIyMzgsImV4cCI6MjA1ODM5ODIzOH0.pegl-Z-ldwd-XS0syysewg2JjKpXJGpxFRU47wFK2LU"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.cjs",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "src/**/*.{cjs,ts,jsx,tsx}",
+      "use": "@vercel/static"
     }
-  },
-  "buildCommand": "npm install --legacy-peer-deps && npm run build"
+  ],
+  "routes": [
+    {
+      "src": "/api/questions",
+      "dest": "/api/questions/index.cjs"
+    },
+    {
+      "src": "/api/questions/(.*)",
+      "dest": "/api/questions/[id].cjs"
+    },
+    {
+      "src": "/api/categories",
+      "dest": "/api/categories/index.cjs"
+    }
+  ]
 }
+

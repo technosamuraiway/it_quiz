@@ -24,6 +24,6 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src", "**/*.ts", "**/*.tsx"],
+  "include": ["src", "**/*.ts", "**/*.tsx", "api/quiz/index.js"],
   "exclude": ["node_modules"]
 }

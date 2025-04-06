@@ -1,0 +1,45 @@
+{
+  "categories": [
+    { "id": 1, "name": "JavaScript" },
+    { "id": 2, "name": "TypeScript" },
+    { "id": 3, "name": "React" }
+  ],
+  "questions": [
+    {
+      "id": 101,
+      "categoryId": 1,
+      "question": "What is the output of `console.log(typeof null)`?",
+      "answers": [
+        "object",
+        "null",
+        "undefined",
+        "string"
+      ],
+      "correctAnswer": "object"
+    },
+    {
+      "id": 102,
+      "categoryId": 2,
+      "question": "Which keyword is used for defining types in TypeScript?",
+      "answers": [
+        "type",
+        "interface",
+        "both",
+        "none"
+      ],
+      "correctAnswer": "both"
+    },
+    {
+      "id": 103,
+      "categoryId": 3,
+      "question": "What hook is used for managing state in React?",
+      "answers": [
+        "useEffect",
+        "useState",
+        "useReducer",
+        "useMemo"
+      ],
+      "correctAnswer": "useState"
+    }
+  ]
+}
