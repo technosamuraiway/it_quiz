@@ -1,7 +1,7 @@
 const { readFileSync, writeFileSync } = require('fs');
 const { join } = require('path');
 
-const dbPath = join(process.cwd(), 'db.json');
+const dbPath = 'tmp/db.json';
 
 module.exports = async (req, res) => {
   // Устанавливаем заголовки для поддержки CORS
