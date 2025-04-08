@@ -1,13 +1,13 @@
 import s from './header.module.scss'
-import Typography from '../../shared/ui/typography'
+import Typography from '../../ui/typography'
 import { Link, useLocation } from 'react-router-dom'
 
-export function Header() {
+export const Header = () => {
   const location = useLocation()
   return (
     <header className={s.header}>
       <Link to={'/'}>
-        <img height={80} className={s.logoImage} width={190} src="/logoQuiz.svg" alt="logo" />
+        <img height={80} className={s.logoImage} width={190} src="/logo/quiz-logo.svg" alt="logo" />
       </Link>
       <div>
         <Link to={'/'}>

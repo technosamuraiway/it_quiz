@@ -2,6 +2,8 @@
 
 .contentBlock {
   @include mixin.content-block;
+
+  background-color: #3d994a;
 }
 
 .title {

@@ -19,7 +19,8 @@
     "noUncheckedSideEffectImports": true,
     "types": ["node"],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@public/*": ["./public/*"]
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true

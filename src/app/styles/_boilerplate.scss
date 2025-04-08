@@ -29,6 +29,10 @@ body {
   background-color: var(--color-info-50);
 }
 
+#root {
+  min-height: 100vh;
+}
+
 div,
 span,
 applet,

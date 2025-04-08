@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 
 import s from './layout.module.scss'
-import { Footer, Header } from '@/widgets'
+import { Footer, Header } from '@/shared'
 
 export function Layout() {
   return (
