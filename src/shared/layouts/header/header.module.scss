@@ -1,28 +1,15 @@
 .header {
   display: flex;
   justify-content: space-between;
+}
 
-  & > div {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
+.navigation {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background-color: yellow;
+}
 
-  & > div > h2 {
-    @media (width <= 860px) {
-      font-size: 1.75rem !important;
-    }
-  }
-
-  .logoImage {
-    @media (width <= 860px) {
-      width: 10rem;
-    }
-  }
-
-  @media (width <= 860px) {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-  }
+.navItem {
+  background-color: #8d26a9;
 }

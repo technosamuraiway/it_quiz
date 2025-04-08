@@ -9,13 +9,15 @@ export const Header = () => {
       <Link to={'/'}>
         <img height={80} className={s.logoImage} width={190} src="/logo/quiz-logo.svg" alt="logo" />
       </Link>
-      <div>
+
+      <nav className={s.navigation}>
         <Link to={'/'}>
           <Typography
             weight={'medium'}
             pointer
             variant={'h2'}
             underline={location.pathname === '/'}
+            className={s.navItem}
           >
             главная
           </Typography>
@@ -27,11 +29,12 @@ export const Header = () => {
             underline={location.pathname === '/questions'}
             pointer
             variant={'h2'}
+            className={s.navItem}
           >
             вопросы
           </Typography>
         </Link>
-      </div>
+      </nav>
     </header>
   )
 }

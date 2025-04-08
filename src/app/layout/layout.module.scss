@@ -1,8 +1,6 @@
-@use '../styles/mixins' as mixins;
+@use '../../styles/mixins' as mixins;
 
 .container {
-  @include mixins.container;
-
   display: flex;
   flex-flow: column nowrap;
 
@@ -16,4 +14,6 @@
     width: 100%;
     height: 100%;
   }
+
+  @include mixins.container;
 }

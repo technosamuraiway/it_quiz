@@ -1,8 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './styles/index.scss'
 import { router } from '@/app/router'
 import { RouterProvider } from 'react-router-dom'
+
+import '@/styles/index.scss'
 
 window.addEventListener('load', async () => {
   if ('serviceWorker' in navigator) {
